@@ -821,10 +821,7 @@ Resources:
                       OSBOTN|${OSBOTN}
                       OracleVersion|${OracleVersion}
                       OSBPass|${OSBPass}
-                    - QuickStartS3URL: !If
-                        - GovCloudCondition
-                          - 'https://s3-us-gov-west-1.amazonaws.com
-                          - 'https://s3.amazonaws.com
+                    - QuickStartS3URL: !If [GovCloudCondition, 'https://s3-us-gov-west-1.amazonaws.com', 'https://s3.amazonaws.com']
                   - Code|
                   - !FindInMap
                     - OracleAMINameMap
@@ -1236,10 +1233,7 @@ Resources:
                       OSBOTN|${OSBOTN}
                       OracleVersion|${OracleVersion}
                       OSBPass|${OSBPass}
-                    - QuickStartS3URL: !If
-                        - GovCloudCondition
-                          - 'https://s3-us-gov-west-1.amazonaws.com
-                          - 'https://s3.amazonaws.com
+                    - QuickStartS3URL: !If [GovCloudCondition, 'https://s3-us-gov-west-1.amazonaws.com', 'https://s3.amazonaws.com']
                   - Code|
                   - !FindInMap
                     - OracleAMINameMap
